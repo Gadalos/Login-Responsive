@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="description" content="Sistema de Asistencia Beta - GAAAAAAAAAAA">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title>Formulario de Inicio de Sesion</title>
+  <title>Asistencia Devioz</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link rel="icon" href="https://devioz.com/images/Logo_icon.webp">
+  <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container-form">
       <div class="information">
         <div class="info-childs">
-          <h2>Bienvenido</h2>
-          <p>Para registrar tu asistencia en la plataforma por favor Inicia Sesión</p>
+          <!-- <h2>Bienvenido</h2> -->
+          <div class="logo">
+            <i class="img-logo"></i>
+          </div>
+          <p>Todo lo que necesitas en un solo lugar</p>
           <input type="button" value="Iniciar Sesión">
         </div>
       </div>
       <div class="form-information">
-        <div class="form-information-childs">
-           <h2>Iniciar Sesión</h2>
-           <div class="icons">
+        <label class="form-information-childs">
+           <h2>Bienvenido</h2>
+           <!-- <div class="icons">
             <i class='bx bxl-google'></i>
             <i class='bx bxl-github' ></i>
             <i class='bx bxl-linkedin' ></i>
-           </div>
-           <p>o usa tu correo para ingresar</p>
+           </div> -->
+           <p>Registra tu asistencia en la plataforma</p>
            <form action="" class="form">
             <label >
               <i class='bx bx-user' ></i>
-              <input type="text" name="" id="" placeholder="Ingrese su Usuario">
+              <input type="text" name="" id="usuario" placeholder="Ingrese su Usuario">
             </label>
             <label >
               <i class='bx bx-lock-alt' ></i>
-              <input type="password" name="" id="" placeholder="Ingrese su Contraseña">
+              <input type="password" name="" id="clave" placeholder="Ingrese su Contraseña">
+                <button type="button" id="togglePassword">
+                  <i class='bx bx-show' id="togglePassword"></i>
+                </button>
             </label>
+            <!-- Recaptcha v2 - Google -->
+            <div class="g-recaptcha" id="centrar" data-sitekey="6Lc8b0gpAAAAACbmtC66PuqGDMi6lybqQfKlT46k "></div>
             <input type="submit" value="Ingresar">
            </form>
         </div>
